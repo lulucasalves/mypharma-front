@@ -5,5 +5,5 @@ export const api = axios.create({
     "Access-Control-Allow-Origin": "*",
     "Accept-Language": "pt-BR",
   },
-  baseURL: `https://mypharma-api.app.vercel`,
+  baseURL: `http://localhost:5000`,
 });

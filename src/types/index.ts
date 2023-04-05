@@ -1,24 +1,19 @@
-export interface IGetCharacter {
-  id: number;
+export interface IGetProducts {
+  _id: number;
   name: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: { name: string; url: string };
-  location: { name: string; url: string };
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
+  category: string;
+  price: number;
+  image: string
+  description: string;
+}
+
+export interface IGetCategories {
+  _id: number;
+  name: string;
 }
 
 export interface IGetParams {
-  info: {
-    count: number;
-    pages: number;
-    next: string | null;
-    prev: string | null;
-  };
-  results: IGetCharacter[];
+  order: "nameC" | "nameD" | "priceD" | "priceC";
+  category: string;
+  query: string;
 }

@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+
 import { Products } from "~/templates";
 
 const Home: NextPage = () => {
