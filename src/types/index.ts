@@ -1,10 +1,15 @@
 export interface IGetProducts {
-  _id: number;
+  _id: string;
   name: string;
   category: string;
   price: number;
-  image: string
+  image: string;
   description: string;
+}
+
+export interface IGetProductsStore {
+  product: IGetProducts;
+  quantity: number;
 }
 
 export interface IGetCategories {

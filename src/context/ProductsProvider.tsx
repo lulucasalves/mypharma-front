@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 
-import { IGetParams, IGetProducts } from "~/types/index";
+import { IGetParams, IGetProducts, IGetProductsStore } from "~/types";
 
 export const MyContext = createContext<IMyContext>({});
 
@@ -11,15 +11,15 @@ interface IContext {
 export interface IMyContext {
   products?: IGetProducts[];
   setProducts?: (value: IGetProducts[]) => void;
-  cart?: IGetProducts[];
-  changeCart?: (value: IGetProducts[]) => void;
+  cart?: IGetProductsStore[];
+  changeCart?: (value: IGetProductsStore[]) => void;
   filters?: IGetParams;
   setFilters?: (value: IGetParams) => void;
 }
 
 export function ProductsProvider({ children }: IContext) {
   const [products, setProducts] = useState<IGetProducts[]>([]);
-  const [cart, setCart] = useState<IGetProducts[]>([]);
+  const [cart, setCart] = useState<IGetProductsStore[]>([]);
   const [filters, setFilters] = useState<IGetParams>({
     category: "",
     order: "nameD",
@@ -34,7 +34,7 @@ export function ProductsProvider({ children }: IContext) {
     }
   }, []);
 
-  function changeCart(value: IGetProducts[]) {
+  function changeCart(value: IGetProductsStore[]) {
     localStorage.setItem("cart", JSON.stringify(value));
     setCart(value);
 

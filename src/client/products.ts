@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { IGetCategories } from "~/types";
+import { IGetProducts } from "~/types";
 import { api } from "./fetcher";
 
 export async function getProducts({
@@ -16,7 +16,14 @@ export async function getProducts({
     category && category !== "all" ? `&&category=${category}` : "";
 
   return api
-    .get<IGetCategories[]>(`/product?sort=${sort}${queryParam}${categoryParam}`)
-    .then((response: AxiosResponse<IGetCategories[]>) => response.data)
+    .get<IGetProducts[]>(`/product?sort=${sort}${queryParam}${categoryParam}`)
+    .then((response: AxiosResponse<IGetProducts[]>) => response.data)
+    .catch((error) => console.log(error));
+}
+
+export async function getProductsById(id: string) {
+  return api
+    .get<IGetProducts>(`/product/${id}`)
+    .then((response: AxiosResponse<IGetProducts>) => response.data)
     .catch((error) => console.log(error));
 }

@@ -45,7 +45,7 @@ export const InputDiv = styled.div`
 export const SelectDiv = styled.div`
   position: relative;
   display: flex;
-justify-content: center;
+  justify-content: center;
 
   svg {
     position: absolute;

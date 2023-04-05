@@ -5,6 +5,7 @@ import { ProductsProvider } from "~/context/ProductsProvider";
 import { Global } from "~/styles/globals";
 
 import "react-loading-skeleton/dist/skeleton.css";
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -5,5 +5,5 @@ export const api = axios.create({
     "Access-Control-Allow-Origin": "*",
     "Accept-Language": "pt-BR",
   },
-  baseURL: `http://localhost:5000`,
+  baseURL: `https://mypharma-backend-d1na.onrender.com`,
 });

@@ -4,4 +4,5 @@ export const colors = {
   blue: "#237DFA",
   darkBlue: "#0D345F",
   yellow: "#F5DE58",
+  blueOpacity: "rgba(35, 125, 250,.8)",
 };
