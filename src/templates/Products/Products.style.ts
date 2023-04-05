@@ -6,7 +6,7 @@ export const Content = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 0 100px;
+  padding: 0 75px;
 
   @media (max-width: 600px) {
     padding: 0 25px;

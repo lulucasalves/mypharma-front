@@ -29,13 +29,15 @@ export function Cards() {
 
   return (
     <Container>
-      {isLoading
-        ? [1, 2, 3, 4, 5, 6].map((i) => (
-            <Skeleton key={i} height={460} borderRadius={8} width={350} />
-          ))
-        : products &&
-          products.length &&
-          products.map((product) => <Card data={product} key={product._id} />)}
+      {isLoading ? (
+        [1, 2, 3, 4, 5, 6].map((i) => (
+          <Skeleton key={i} height={460} borderRadius={8} width={350} />
+        ))
+      ) : products && products.length ? (
+        products.map((product) => <Card data={product} key={product._id} />)
+      ) : (
+        <h2>Nenhum produto foi encontrado...</h2>
+      )}
     </Container>
   );
 }

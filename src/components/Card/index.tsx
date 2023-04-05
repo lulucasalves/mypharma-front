@@ -16,9 +16,7 @@ export function Card({ data }: { data: IGetProducts }) {
     <Container>
       <ImageContainer url={data.image} />
       <Title>{data.name}</Title>
-      <Description>
-        {data.category}
-      </Description>
+      <Description>{data.category}</Description>
       <Title>R${String(data.price).replace(".", ",")}</Title>
       <Button onClick={() => changeCart!([...cart!, data])}>
         Adicionar ao carrinho

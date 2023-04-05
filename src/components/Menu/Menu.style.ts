@@ -10,7 +10,7 @@ export const Container = styled.div`
   background-color: ${colors.darkBlue};
   margin-bottom: 50px;
 
-  padding: 0 100px;
+  padding: 0 75px;
 
   @media (max-width: 600px) {
     padding: 0 25px;

@@ -44,6 +44,8 @@ export const InputDiv = styled.div`
 
 export const SelectDiv = styled.div`
   position: relative;
+  display: flex;
+justify-content: center;
 
   svg {
     position: absolute;
@@ -71,6 +73,26 @@ export const SelectDiv = styled.div`
     width: 100%;
     select {
       width: 100%;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    width: 130px;
+    border-radius: 4px;
+    height: 40px;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    color: ${colors.white};
+    background-color: ${colors.blue};
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.8;
     }
   }
 `;

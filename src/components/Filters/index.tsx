@@ -19,13 +19,12 @@ export function Filters() {
 
     const value = e.target[0].value;
 
-    if (value)
-      setFilters!((old) => {
-        return {
-          ...old,
-          query: value,
-        };
-      });
+    setFilters!((old) => {
+      return {
+        ...old,
+        query: value,
+      };
+    });
   }
 
   function changeCategory(e: ChangeEvent<HTMLSelectElement>) {
@@ -100,6 +99,11 @@ export function Filters() {
           <option value="nameC">Nome [a-z]</option>
           <option value="nameD">Nome [z-a]</option>
         </select>
+      </SelectDiv>
+      <SelectDiv
+        onClick={() => setFilters!({ order: "nameD", category: "", query: "" })}
+      >
+        <p>Limpar Filtros</p>
       </SelectDiv>
     </Container>
   );
